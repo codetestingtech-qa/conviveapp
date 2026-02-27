@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Vamos rodar como server (pra fazer proxy e injetar tags no HTML)
+  async rewrites() {
+    return [
+      {
+        source: "/assets/:path*",
+        destination: "https://conviveapp.com.br/assets/:path*",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

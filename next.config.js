@@ -1,13 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   async rewrites() {
     return [
       {
         source: "/assets/:path*",
-        destination: "https://conviveapp.com.br/assets/:path*",
+        destination: "https://conviveapp.lovable.app/assets/:path*",
       },
     ];
   },
 };
-
-module.exports = nextConfig;
